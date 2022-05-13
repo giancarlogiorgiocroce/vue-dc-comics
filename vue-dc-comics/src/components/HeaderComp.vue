@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header class="container">
       <div class="logo">
         <img src="../assets/img/dc-logo.png" alt="DC logo">
       </div>
@@ -82,7 +82,9 @@ export default {
         display: flex;
         justify-content: space-around;
         align-items: center;
-        height: 80px;
+        height: 100px;
+        // border-bottom: 4px solid white;
+
         img{
             height: 75px;
         };
@@ -93,7 +95,7 @@ export default {
         justify-content: space-between;
         align-items: center;
         li {
-            padding: 30px 0;
+            padding: 40px 0;
             margin: 0 15px;
             border-bottom: 5px solid white;
             &.active{
