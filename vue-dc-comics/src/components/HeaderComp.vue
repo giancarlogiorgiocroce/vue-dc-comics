@@ -5,8 +5,10 @@
       </div>
       <nav>
           <ul>
-              <li v-for="(el, i) in navbar" :key="`navbar${i}`">
-                  <a href="">{{el.name}}</a>
+              <li v-for="(el, i) in navbar" :key="`navbar${i}`"
+                :class="{'active': el.isActive}"
+                @click="el.isActive = !el.isActive">
+                  <a :href="el.href">{{el.name}}</a>
               </li>
           </ul>
       </nav>
@@ -31,7 +33,7 @@ export default {
             {
                 name: "movies",
                 href: "#",
-                isActive: false,
+                isActive: true,
             },
             {
                 name: "tv",
@@ -80,7 +82,7 @@ export default {
         display: flex;
         justify-content: space-around;
         align-items: center;
-        height: 100px;
+        height: 80px;
         img{
             height: 75px;
         };
@@ -91,10 +93,14 @@ export default {
         justify-content: space-between;
         align-items: center;
         li {
-            padding: 50px 0;
+            padding: 30px 0;
             margin: 0 15px;
+            border-bottom: 5px solid white;
             &.active{
                 border-bottom: 5px solid rgb(2, 130, 249);
+            }
+            &.active a{
+                color: rgb(2, 130, 249);
             }
         }
         a {
