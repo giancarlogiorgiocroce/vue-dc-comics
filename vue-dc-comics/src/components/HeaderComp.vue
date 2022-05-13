@@ -83,14 +83,12 @@ export default {
         justify-content: space-around;
         align-items: center;
         height: 100px;
-        // border-bottom: 4px solid white;
 
         img{
             height: 75px;
         };
     }
     ul{
-        list-style: none;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -99,10 +97,10 @@ export default {
             margin: 0 15px;
             border-bottom: 5px solid white;
             &.active{
-                border-bottom: 5px solid rgb(2, 130, 249);
+                border-bottom: 5px solid $dc-color;
             }
             &.active a{
-                color: rgb(2, 130, 249);
+                color: $dc-color;
             }
         }
         a {
@@ -110,7 +108,7 @@ export default {
             font-size: 12px;
             font-weight: bold;
             &:hover{
-                color: rgb(2, 130, 249);
+                color: $dc-color;
             }
         }
     }
