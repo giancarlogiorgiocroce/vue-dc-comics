@@ -3,7 +3,7 @@
       <div class="container">
           <ul>
               <li :key="`shop${i}`" v-for="(el, i) in items">
-                    <i :class="`fa-solid ${el.iconType}`"></i>
+                    <img :src="el.src" :alt="el.whatIsIt">
                     <a :href="el.href">
                         {{el.whatIsIt}}
                     </a>
@@ -21,27 +21,27 @@ export default {
                 {
                     whatIsIt: "digital comics",
                     href: "#",
-                    iconType: "fa-tablet-screen-button",
+                    src: require('../assets/img/buy-comics-digital-comics.png')
                 },
                 {
                     whatIsIt: "dc merchandise",
                     href: "#",
-                    iconType: "fa-shirt",
+                    src: require('../assets/img/buy-comics-merchandise.png'),
                 },
                 {
                     whatIsIt: "subscriptions",
                     href: "#",
-                    iconType: "fa-bolt",
+                    src: require('../assets/img/buy-comics-subscriptions.png'),
                 },
                 {
                     whatIsIt: "comic shop locator",
                     href: "#",
-                    iconType: "fa-location-dot",
+                    src: require('../assets/img/buy-comics-shop-locator.png'),
                 },
                 {
                     whatIsIt: "dc power visa",
                     href: "#",
-                    iconType: "fa-credit-card",
+                    src: require('../assets/img/buy-dc-power-visa.svg'),
                 },
             ]
         }
@@ -64,10 +64,13 @@ export default {
         li{
             display: flex;
             align-items: center;
+            justify-content: center;
+            min-width: 200px;
         }
-        i{
-            font-size: 40px;
-            margin: 0 20px;
+        img{
+            max-width: 50px;
+            max-height: 50px;
+            margin: 0 10px;
         }
         a{
             text-transform: uppercase;

@@ -1,14 +1,15 @@
 <template>
   <footer>
-    <div>Qualcosa</div>
+    <FooterUp />
     <FooterDown />
   </footer>
 </template>
 
 <script>
 import FooterDown from "./FooterDown.vue";
+import FooterUp from "./FooterUp.vue";
 export default {
-    components: { FooterDown }
+    components: { FooterDown, FooterUp }
 }
 </script>
 

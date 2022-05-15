@@ -11,11 +11,11 @@
                             FOLLOW US
                         </h4>
                     </li>
-                    <li :key="`social$${i}`" v-for="(el, i) in arraySocial">
-                        <a :href="el.href">
-                            <i :class="`fa-solid ${el.iconType} `"></i>
-                        </a>
-                    </li>
+                    <li><a href="#"><img src="../assets/img/footer-facebook.png" alt="#"></a></li>
+                    <li><a href="#"><img src="../assets/img/footer-twitter.png" alt="#"></a></li>
+                    <li><a href="#"><img src="../assets/img/footer-youtube.png" alt="#"></a></li>
+                    <li><a href="#"><img src="../assets/img/footer-pinterest.png" alt="#"></a></li>
+                    <li><a href="#"><img src="../assets/img/footer-periscope.png" alt="#"></a></li>
                 </ul>
             </div>
         </div>
@@ -24,32 +24,7 @@
 
 <script>
 export default {
-    data(){
-        return {
-            arraySocial:[
-                {
-                    href: "#",
-                    iconType: "fa-facebook"
-                },
-                {
-                    href: "#",
-                    iconType: "fa-twitter"
-                },
-                {
-                    href: "#",
-                    iconType: "fa-youtube"
-                },
-                {
-                    href: "#",
-                    iconType: "fa-patreon"
-                },
-                {
-                    href: "#",
-                    iconType: "fa-location-dot"
-                },
-            ]
-        }
-    }
+
 }
 </script>
 
@@ -81,9 +56,6 @@ footer{
         li{
             margin: 0 20px;
         }
-    }
-    i{
-        font-size: 25px;
     }
 }
 
