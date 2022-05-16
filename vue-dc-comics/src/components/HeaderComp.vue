@@ -83,6 +83,7 @@ export default {
         justify-content: space-around;
         align-items: center;
         height: 100px;
+        border-bottom: 4px solid white;
 
         img{
             height: 75px;
