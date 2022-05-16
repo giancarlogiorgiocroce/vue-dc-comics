@@ -51,6 +51,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '../assets/style/vars';
+@import '../assets/style/mixin';
     section{
         height: 200px;
         background-color: $dc-color;
@@ -58,12 +59,10 @@ export default {
     }
     ul{
         height: 100%;
-        display: flex;
-        align-items: center;
+        @include row-centered;
         justify-content: space-around;
         li{
-            display: flex;
-            align-items: center;
+            @include row-centered;
             justify-content: center;
             min-width: 200px;
         }

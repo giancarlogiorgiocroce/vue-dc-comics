@@ -78,10 +78,10 @@ export default {
 
 <style lang="scss" scoped>
 @import '../assets/style/vars';
+@import '../assets/style/mixin';
     header{
-        display: flex;
+        @include row-centered;
         justify-content: space-around;
-        align-items: center;
         height: 100px;
         border-bottom: 4px solid white;
 
@@ -90,9 +90,8 @@ export default {
         };
     }
     ul{
-        display: flex;
+        @include row-centered;
         justify-content: space-between;
-        align-items: center;
         li {
             padding: 40px 0;
             margin: 0 15px;

@@ -30,13 +30,13 @@ export default {
 
 <style lang="scss" scoped>
 @import '../assets/style/vars';
+@import '../assets/style/mixin';
 footer{
     background-color: rgb(48, 48, 48);
     height: 100px;
     .container{
-        display: flex;
+        @include row-centered;
         justify-content: space-between;
-        align-items: center;
 }
 }
 .sx{
@@ -51,8 +51,7 @@ footer{
         color: $dc-color;
     }
     ul{
-        display: flex;
-        align-items: center;
+        @include row-centered;
         li{
             margin: 0 20px;
         }
